@@ -1,0 +1,128 @@
+/*** README
+This is a cheat sheet for frequently used linux commands. Please note that a pre-requisite is that you have the appropriate access to move, read, write, edit, delete files and folders.
+
+Also, command line is case-sensitive so type carefully.
+***/
+
+KNOW WHERE YOUR CURRENT DIRECTORY
+pwd
+
+LIST FOLDERS AND FILES IN A DIRECTORY
+ls
+ls -l  (long format)
+ls -a (all files)
+ls -la (long format and all files)
+
+NAVIGATION (change directory)
+
+GO TO HOME DIRECTORY
+cd
+
+GO TO ROOT DIRECTORY
+cd /
+
+GO DOWN TO A DIRECTORY
+cd <directory>
+cd <directory1>/<directory2> etc.
+
+GO UP A DIRECTORY
+// .. means level so if it is  cd ../.. it is 2 levels up
+
+cd ..
+cd ../../..
+
+CREATE A FOLDER
+mkdir <foldername>
+
+MOVE A FOLDER
+mv <sourcefolderpath> <targetfolderpath>
+
+RENAME A FOLDER
+mv <foldername> <newfoldername>
+
+COPY A FOLDER
+cp -R <sourcefolderpath> <targetfolderpath>
+
+You need to change directories so that you are outside of the directory you are trying to copy. If the directory you're copying is called dir1 and you want to copy it to your /home/Pictures folder:
+
+cp -r dir1/ ~/Pictures/
+
+Linux is case-sensitive and also needs the / after each directory to know that it isn't a file.  ~ is a special character in the terminal that automatically evaluates to the current user's home directory.
+
+DELETE A FOLDER
+rmdir <foldername>
+
+CREATE A FILE
+touch <filename>
+
+MOVE A FILE
+mv <filename> <folder>
+mv <sourcefilepath> <targetfolderpath>
+
+RENAME A FILE
+mv <filename> <newfilename>
+
+COPY A FILE
+cp <filename> <newfilename>
+
+
+EDIT A FILE USING VIM
+vim <filename>
+press i on the keyboard
+press esc on the keyboard
+press : on the keyboard
+type wq and press enter key to save file
+
+
+DELETE A FILE
+rm <filename>
+
+force delete
+rm -r <file>
+
+FIND FILES
+
+Find all files and folders in current directory
+find .
+
+Find folders in current directory
+find . type -d
+
+Find all files and folders in other directory
+find <foldername>
+
+Find all folders on computer
+find / -name <foldername> -type d
+
+MANIPULATING THE CURSOR ON COMMAND LINE
+
+Ctrl+a Move cursor to start of line
+Ctrl+e Move cursor to end of line
+Ctrl+b Move back one character
+Alt+b Move back one word
+Ctrl+f Move forward one character
+Alt+f Move forward one word
+Ctrl+d Delete current character
+Ctrl+w Cut the last word
+Ctrl+k Cut everything after the cursor
+Alt+d Cut word after the cursor
+Alt+w Cut word before the cursor
+Ctrl+y Paste the last deleted command
+Ctrl+_ Undo
+Ctrl+u Cut everything before the cursor
+Ctrl+xx Toggle between first and current position
+Ctrl+l Clear the terminal
+Ctrl+c Cancel the command
+Ctrl+r Search command in history - type the search term
+Ctrl+j End the search at current history entry
+Ctrl+g Cancel the search and restore original line
+Ctrl+n Next command from the History
+Ctrl+p previous command from the History
+
+
+
+REFERENCES:
+https://www.thegeekstuff.com/2009/07/linux-ls-command-examples/
+https://www.thegeekstuff.com/2008/10/6-awesome-linux-cd-command-hacks-productivity-tip3-for-geeks/
+https://github.com/0nn0/terminal-mac-cheatsheet
+https://learn.adafruit.com/an-illustrated-shell-command-primer?view=all
